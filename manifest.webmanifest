@@ -1,0 +1,1 @@
+{"name":"競馬コースノート","short_name":"競馬ノート","description":"コース特徴を記録し、馬券の組み合わせを計算するオフライン対応ノート","start_url":"./","scope":"./","display":"standalone","background_color":"#f4f6f3","theme_color":"#122e29","icons":[{"src":"./icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any"}]}
