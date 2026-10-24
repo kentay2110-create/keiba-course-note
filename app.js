@@ -2,11 +2,16 @@
 const venues=['札幌','函館','福島','新潟','東京','中山','中京','京都','阪神','小倉'];
 // 選択可能距離は編集可能なノートの入口。実施の有無は各レースの出馬表で確認。
 const distances={'芝':[1000,1200,1400,1500,1600,1700,1800,2000,2200,2300,2400,2500,2600,3000,3200,3400,3600],'ダート':[1000,1150,1200,1300,1400,1600,1700,1800,1900,2000,2100,2400,2500]};
-const starter={'東京|芝|1600':{fact:'左回り。最後の直線は525.9mで上り坂がある。',source:'JRA公表のコース概要を参考にした初期メモ',shape:'左回り。長い直線と上り坂が特徴。',trend:'枠順・脚質の有利不利は、馬場状態やペースによって変わるため、データで確認する。',checks:'直線で脚を長く使えるか／坂への対応力／同条件の実績を確認。',memo:''}};
+const starter={};
+let courseData=null;
+async function loadPublishedCourses(){
+  try { const r=await fetch('./course-data.json',{cache:'no-cache'});if(!r.ok)throw Error('コースデータを取得できません');courseData=await r.json();for(const c of courseData.courses){starter[c.id]={fact:c.shape,source:c.evidence,shape:c.shape,trend:c.trend,checks:c.checks,memo:''};}loadCourse(); }
+  catch(err){document.getElementById('saveStatus').textContent='公開データの読み込みに失敗しました。通信状態を確認してください。';}
+}
 const $=id=>document.getElementById(id),fmt=n=>Number(n).toLocaleString('ja-JP');
 let notes={};try{const x=JSON.parse(localStorage.getItem('race-course-notes-v1')||'{}');if(x&&typeof x==='object'&&!Array.isArray(x))notes=x;}catch(e){}
 function key(){return `${$('venue').value}|${$('surface').value}|${$('distance').value}`;}
-function loadCourse(){const k=key(),preset=starter[k]||{},item=notes[k]||preset;$('courseName').textContent=`${$('venue').value}｜${$('surface').value}${$('distance').value}m`;$('verified').innerHTML='';const b=document.createElement('strong');b.textContent=preset.fact?'初期登録のコース概要':'基本情報は未登録';const p=document.createElement('div');p.textContent=preset.fact||'自分のメモを入力できます。コースの特性はJRAなどで確認してください。';$('verified').append(b,p);for(const f of ['shape','trend','checks','memo'])$(f).value=typeof item[f]==='string'?item[f]:'';$('saveStatus').textContent=notes[k]?'保存済みのメモを表示中':'';}
+function loadCourse(){const k=key(),preset=starter[k]||{},item=notes[k]||preset;$('courseName').textContent=`${$('venue').value}｜${$('surface').value}${$('distance').value}m`;$('verified').innerHTML='';const b=document.createElement('strong');b.textContent=preset.fact?'初期登録のコース概要':'基本情報は未登録';const p=document.createElement('div');p.textContent=preset.fact||'公開データ未登録。コースの特性はJRAなどで確認してください。'; if(courseData && $('venue').value==='東京'){const c=courseData.courses.find(x=>x.id===k);if(c){p.textContent+='\n【注意】'+c.caution;}else{p.textContent+='\n東京の共通知識：芝直線525.9m／ダート直線501.6m、左回り・上り坂あり。';}}$('verified').append(b,p);for(const f of ['shape','trend','checks','memo'])$(f).value=typeof item[f]==='string'?item[f]:'';$('saveStatus').textContent=notes[k]?'保存済みのメモを表示中':'';}
 function refreshDistances(){const prev=$('distance').value;$('distance').replaceChildren(...distances[$('surface').value].map(d=>new Option(`${d}m`,String(d))));$('distance').value=distances[$('surface').value].includes(Number(prev))?prev:'1600';if(!$('distance').value)$('distance').selectedIndex=0;loadCourse();}
 $('venue').replaceChildren(...venues.map(v=>new Option(v+'競馬場',v)));$('venue').value='東京';$('surface').value='芝';$('distance').replaceChildren(...distances['芝'].map(d=>new Option(`${d}m`,String(d))));$('distance').value='1600';loadCourse();
 $('venue').addEventListener('change',loadCourse);$('surface').addEventListener('change',refreshDistances);$('distance').addEventListener('change',loadCourse);
@@ -18,4 +23,5 @@ function calc(){const n=Number($('horses').value),type=$('bet').value,a=n*(n-1)/
 ['horses','bet','tickets'].forEach(id=>$(id).addEventListener('input',calc));calc();
 $('export').addEventListener('click',()=>{const blob=new Blob([JSON.stringify({version:1,exportedAt:new Date().toISOString(),notes},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='keiba-course-notes.json';a.click();setTimeout(()=>URL.revokeObjectURL(url),2000);});
 $('import').addEventListener('change',async e=>{const file=e.target.files?.[0];if(!file)return;try{if(file.size>2_000_000)throw Error('ファイルが大きすぎます');const data=JSON.parse(await file.text());if(data.version!==1||!data.notes||typeof data.notes!=='object'||Array.isArray(data.notes))throw Error('対応していないファイルです');if(!confirm('現在のメモを復元データで上書きします。よろしいですか？'))return;const clean={};for(const [k,v] of Object.entries(data.notes)){if(!/^.+\|(芝|ダート)\|\d+$/.test(k)||!v||typeof v!=='object')continue;clean[k]={};for(const f of ['shape','trend','checks','memo'])clean[k][f]=String(v[f]||'').slice(0,20000);}localStorage.setItem('race-course-notes-v1',JSON.stringify(clean));notes=clean;loadCourse();$('importStatus').textContent='復元しました。';}catch(err){$('importStatus').textContent='復元できませんでした：'+err.message;}finally{e.target.value='';}});
+loadPublishedCourses();
 if('serviceWorker' in navigator&&location.protocol.startsWith('http'))window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js').catch(()=>{}));

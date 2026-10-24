@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-24",
+  "common": {
+    "venue": "東京",
+    "direction": "左回り",
+    "turfStraightMeters": 525.9,
+    "dirtStraightMeters": 501.6,
+    "turfElevationMeters": 2.7,
+    "dirtElevationMeters": 2.5,
+    "officialFacts": [
+      "芝直線525.9m、ダート直線501.6m",
+      "芝コースはA〜Dの仮柵を使い分ける",
+      "直線には上り坂があり、芝・ダートとも起伏がある",
+      "芝の発走距離は1400・1600・1800・2000・2300・2400・2500・2600・3400m、ダートは1200・1300・1400・1600・2100・2400m"
+    ],
+    "analysisNotes": [
+      "長い直線での末脚・持続力が検討材料。先行／差しの一律断定は避ける",
+      "枠順の有利不利は開催週、使用コース、馬場状態、頭数によって変化するため当日の条件と統計を確認",
+      "左回り実績は判断材料の一つ。右回りの実績だけで適性なしとはしない",
+      "上り坂は存在するため『平坦とみなす』『坂適性不要』とは一律に扱わない"
+    ],
+    "officialSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+  },
+  "courses": [
+    {
+      "id": "東京|芝|1400",
+      "venue": "東京",
+      "surface": "芝",
+      "distance": 1400,
+      "shape": "スタート後に上り勾配があり、長い直線へ向かう。",
+      "trend": "ペースや使用仮柵により変動。先行力・上がりの速さを比較。",
+      "checks": "前走1600m以上からの短縮馬、先行力と折り合いを確認。1200mからの延長は折り合いを慎重に確認。",
+      "caution": "距離短縮の優位性や1200m延長馬の不振は未検証。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|芝|1600",
+      "venue": "東京",
+      "surface": "芝",
+      "distance": 1600,
+      "shape": "最初のコーナーまで比較的距離があり、長い直線での持続力・決め手が問われる。",
+      "trend": "1400mより差し馬にも注目する、という予想仮説。",
+      "checks": "阪神・新潟の芝1600mでの好走、最後の伸びや同距離の実績を確認。",
+      "caution": "中山芝1600m好走馬を一律に危険視しない。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|芝|1800",
+      "venue": "東京",
+      "surface": "芝",
+      "distance": 1800,
+      "shape": "ポケットからスタートし、比較的早くコーナーに入る。",
+      "trend": "枠や位置取りとペースを確認。先行・差しとも展開次第。",
+      "checks": "速い上がり3Fを使った実績を確認。時計は馬場・展開と比較する。",
+      "caution": "32〜33秒台なら必ず有利という数値根拠は未確認。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|芝|2000",
+      "venue": "東京",
+      "surface": "芝",
+      "distance": 2000,
+      "shape": "ポケット発走で最初のコーナーまで短く、序盤の位置取りが重要になり得る。",
+      "trend": "内枠・先行を優先候補とする予想仮説。開催条件で再検証が必要。",
+      "checks": "内枠の逃げ・先行馬を候補にしつつ、同条件成績と当日の展開を確認。",
+      "caution": "「内枠圧倒的有利」は集計期間・馬場条件なしでは断定不可。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|芝|2400",
+      "venue": "東京",
+      "surface": "芝",
+      "distance": 2400,
+      "shape": "周回部分が長く、長い直線と起伏への対応、スタミナと末脚を問われる。",
+      "trend": "脚質ごとの有利不利はペース次第。",
+      "checks": "折り合い、長距離実績、末脚の持続力、内枠の若い馬という仮説を確認。",
+      "caution": "3〜4歳・内枠が有利という断定には統計が必要。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|芝|2500",
+      "venue": "東京",
+      "surface": "芝",
+      "distance": 2500,
+      "shape": "芝2400mとスタート位置が異なり、長距離の持久力が求められる。",
+      "trend": "差し・追込に注目する予想仮説。",
+      "checks": "長距離での好走歴、持久力、差し脚の持続力を確認。",
+      "caution": "2400m以上に必ず速い流れになるとは限らない。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|ダート|1300",
+      "venue": "東京",
+      "surface": "ダート",
+      "distance": 1300,
+      "shape": "ダートスタート。初角まで比較的短く、長い直線と起伏がある。",
+      "trend": "内枠・逃げ・先行を注目候補とする予想仮説。",
+      "checks": "内枠の先行馬、序盤の位置取り、近走のダート短距離実績。",
+      "caution": "「内枠圧倒的有利」は統計未確認。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|ダート|1400",
+      "venue": "東京",
+      "surface": "ダート",
+      "distance": 1400,
+      "shape": "ダートスタートで、ダートの長い直線が続く。",
+      "trend": "差し・追込の台頭も検討。枠順の一律断定は避ける。",
+      "checks": "差し脚、東京ダート実績、関西からの遠征馬は遠征理由も確認。",
+      "caution": "関西馬の遠征＝勝負気配と断定できない。「唯一のダートスタート」は誤り。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|ダート|1600",
+      "venue": "東京",
+      "surface": "ダート",
+      "distance": 1600,
+      "shape": "芝スタートでダートへ入る。初角まで長く、長い直線がある。",
+      "trend": "外枠に注目する予想仮説。芝を走る距離や砂被りも検討。",
+      "checks": "外枠、前走1800mからの距離短縮、関西馬などを候補として確認。",
+      "caution": "外枠・関西馬・距離短縮の複合条件の優位性は統計未確認。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "東京|ダート|2100",
+      "venue": "東京",
+      "surface": "ダート",
+      "distance": 2100,
+      "shape": "ダート長距離。起伏への対応とスタミナが重要。",
+      "trend": "逃げ・先行の粘り込みに注目する予想仮説。",
+      "checks": "長距離ダート実績、先行力、ホッコータルマエ産駒を候補として確認。",
+      "caution": "産駒勝率12%・連対率21%・回収率103%は集計条件不明のため収録しない。",
+      "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    }
+  ]
+}
