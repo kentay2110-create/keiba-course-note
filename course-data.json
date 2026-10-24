@@ -1,27 +1,6 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "updatedAt": "2026-10-24",
-  "common": {
-    "venue": "東京",
-    "direction": "左回り",
-    "turfStraightMeters": 525.9,
-    "dirtStraightMeters": 501.6,
-    "turfElevationMeters": 2.7,
-    "dirtElevationMeters": 2.5,
-    "officialFacts": [
-      "芝直線525.9m、ダート直線501.6m",
-      "芝コースはA〜Dの仮柵を使い分ける",
-      "直線には上り坂があり、芝・ダートとも起伏がある",
-      "芝の発走距離は1400・1600・1800・2000・2300・2400・2500・2600・3400m、ダートは1200・1300・1400・1600・2100・2400m"
-    ],
-    "analysisNotes": [
-      "長い直線での末脚・持続力が検討材料。先行／差しの一律断定は避ける",
-      "枠順の有利不利は開催週、使用コース、馬場状態、頭数によって変化するため当日の条件と統計を確認",
-      "左回り実績は判断材料の一つ。右回りの実績だけで適性なしとはしない",
-      "上り坂は存在するため『平坦とみなす』『坂適性不要』とは一律に扱わない"
-    ],
-    "officialSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
-  },
   "courses": [
     {
       "id": "東京|芝|1400",
@@ -142,6 +121,259 @@
       "caution": "産駒勝率12%・連対率21%・回収率103%は集計条件不明のため収録しない。",
       "evidence": "ユーザー提供の予想メモ（成績傾向は未検証）",
       "courseFactsSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    {
+      "id": "京都|芝|1200-内",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 1200,
+      "variant": "内",
+      "shape": "内回り。スタート後に上り勾配があり3コーナー付近の坂を経て平坦な直線へ。",
+      "trend": "内枠・逃げ先行重視の予想仮説。",
+      "checks": "内枠で4コーナー3番手以内を取れそうな馬を確認。",
+      "caution": "「逃げ馬の馬券絡み率7割超」は集計条件未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|1400-内",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 1400,
+      "variant": "内",
+      "shape": "内回り。外回りより直線が短く、コーナーでの立ち回りが重要。",
+      "trend": "先行力・コーナーでの位置取りを重視する仮説。",
+      "checks": "1600m以上からの短縮馬と、好位で運べるかを確認。",
+      "caution": "距離短縮馬の優位性は未検証。内外で傾向が異なる。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|1400-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 1400,
+      "variant": "外",
+      "shape": "外回り。下り坂を使って長めの平坦な直線に向かう。",
+      "trend": "短距離型の粘りと中距離型の末脚を比較する仮説。",
+      "checks": "1600m以上から短縮してくる馬、折り合いと持続力を確認。",
+      "caution": "初めての1400mなら有利という統計根拠は未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|1600-内",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 1600,
+      "variant": "内",
+      "shape": "内回り。直線はAコース328.4m。外回りとは仕掛け位置が異なる。",
+      "trend": "先行力・内をロスなく回る器用さに注目する仮説。",
+      "checks": "好位を取れるか、内回り実績とコーナリングを確認。",
+      "caution": "外回りマイルの差し傾向を流用しない。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|1600-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 1600,
+      "variant": "外",
+      "shape": "外回り。3コーナーの坂を越えて下り、Aコース403.7mの直線へ。マイルCSの舞台。",
+      "trend": "差し脚とコースロスを意識する予想仮説。",
+      "checks": "同距離実績、直線で伸びる脚、内をロスなく立ち回る差し馬を確認。",
+      "caution": "1番人気不振・差しの連対率が平均超えは未検証。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|1800-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 1800,
+      "variant": "外",
+      "shape": "2コーナー奥の引き込み線から発走。最初のコーナーまで長い。",
+      "trend": "差し・追込に注目する予想仮説。",
+      "checks": "前走上がり3F3位以内の実績と、ペースへの対応を確認。",
+      "caution": "序盤が必ず速くなる、差しが常に有利とは限らない。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|2000-内",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 2000,
+      "variant": "内",
+      "shape": "内回り。スタンド前発走、初角まで比較的短い。直線はAコース328.4m。",
+      "trend": "内枠・先行に注目する仮説。",
+      "checks": "内枠で1コーナー5番手以内を狙える馬を確認。",
+      "caution": "「内枠圧倒的有利」の根拠・対象開催未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|2000-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 2000,
+      "variant": "外",
+      "shape": "外回りの2000mもJRA発走距離に設定。内回りとコーナー・直線が異なる。",
+      "trend": "外回りの持続力とペース適性を別に評価。",
+      "checks": "外回り実績、直線の持続力と位置取りを確認。",
+      "caution": "ユーザー提供メモは内回りを対象。外回りの固有統計・ローテ傾向は未登録。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|2200-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 2200,
+      "variant": "外",
+      "shape": "外回り。3～4コーナーの下り坂から長い平坦直線へ。",
+      "trend": "先行～中団差しと速い上がりに注目する仮説。",
+      "checks": "前走2400m以上からの短縮、前走上がり3位以内を確認。",
+      "caution": "キズナ産駒・川田将雅騎手・岩田望来騎手の有利性は対象期間不明。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|2400-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 2400,
+      "variant": "外",
+      "shape": "外回り。序盤の位置取り・折り合い、下り坂からの持続力が重要。",
+      "trend": "好位～中団差しと上がりに注目する仮説。",
+      "checks": "4コーナーで中団より前につけられるか、前走上がり3位以内かを確認。",
+      "caution": "キズナ産駒有利・上がり1位圧倒的の集計条件未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|3000-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 3000,
+      "variant": "外",
+      "shape": "菊花賞で使用される外回りの長距離コース。坂と複数のコーナーを通過。",
+      "trend": "内枠に注目する予想仮説。",
+      "checks": "内枠、折り合い、長距離のスタミナ実績と血統を確認。",
+      "caution": "特定種牡馬の好走傾向や初角距離208mは未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|芝|3200-外",
+      "venue": "京都",
+      "surface": "芝",
+      "distance": 3200,
+      "variant": "外",
+      "shape": "天皇賞（春）の舞台。淀の坂を繰り返し通る長距離戦。",
+      "trend": "好位～中団でスタミナを温存しロングスパートできる馬に注目する仮説。",
+      "checks": "内枠、4コーナーで8番手前後以内につける機動力、折り合いを確認。",
+      "caution": "1枠突出・騎手や血統の有利性は条件付き統計が必要。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|ダート|1200",
+      "venue": "京都",
+      "surface": "ダート",
+      "distance": 1200,
+      "shape": "3コーナー付近で上り下りがあり、平坦なダート直線329.1mへ。",
+      "trend": "逃げ・先行馬の粘り込みに注目する仮説。",
+      "checks": "4コーナー3番手以内を取れる馬を確認。",
+      "caution": "逃げ馬の馬券絡み率4割超の集計条件未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|ダート|1400",
+      "venue": "京都",
+      "surface": "ダート",
+      "distance": 1400,
+      "shape": "芝スタート。3コーナー付近の坂を越えダート直線329.1mへ。",
+      "trend": "外枠の芝区間・砂被りリスクと位置取りを比較する仮説。",
+      "checks": "外枠、前走阪神ダート1400mで先行後に失速した馬の巻き返しを確認。",
+      "caution": "外枠有利や阪神からの転戦馬の好走率は未検証。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|ダート|1800",
+      "venue": "京都",
+      "surface": "ダート",
+      "distance": 1800,
+      "shape": "コーナーまでの位置取りが重要になりうる周回コース。",
+      "trend": "逃げ・先行馬に注目する仮説。",
+      "checks": "4コーナー3番手以内を取れそうな馬を確認。",
+      "caution": "逃げ馬の馬券絡み率5～6割の集計条件未確認。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    },
+    {
+      "id": "京都|ダート|1900",
+      "venue": "京都",
+      "surface": "ダート",
+      "distance": 1900,
+      "shape": "1800mより100m長いダート中距離コース。3コーナーの起伏と平坦な直線に対応。",
+      "trend": "差し・追込馬にも注目する予想仮説。",
+      "checks": "京都ダート1800mで差し届かなかった馬、上がりの順位を確認。",
+      "caution": "「1800mとは真逆」「差し圧倒的有利」は統計未検証。",
+      "evidence": "ユーザー提供の予想メモ（統計的な有利不利は未検証）",
+      "courseFactsSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
     }
-  ]
+  ],
+  "commonByVenue": {
+    "東京": {
+      "venue": "東京",
+      "direction": "左回り",
+      "turfStraightMeters": 525.9,
+      "dirtStraightMeters": 501.6,
+      "turfElevationMeters": 2.7,
+      "dirtElevationMeters": 2.5,
+      "officialFacts": [
+        "芝直線525.9m、ダート直線501.6m",
+        "芝コースはA〜Dの仮柵を使い分ける",
+        "直線には上り坂があり、芝・ダートとも起伏がある",
+        "芝の発走距離は1400・1600・1800・2000・2300・2400・2500・2600・3400m、ダートは1200・1300・1400・1600・2100・2400m"
+      ],
+      "analysisNotes": [
+        "長い直線での末脚・持続力が検討材料。先行／差しの一律断定は避ける",
+        "枠順の有利不利は開催週、使用コース、馬場状態、頭数によって変化するため当日の条件と統計を確認",
+        "左回り実績は判断材料の一つ。右回りの実績だけで適性なしとはしない",
+        "上り坂は存在するため『平坦とみなす』『坂適性不要』とは一律に扱わない"
+      ],
+      "officialSource": "https://www.jra.go.jp/facilities/race/tokyo/course/"
+    },
+    "京都": {
+      "venue": "京都",
+      "direction": "右回り",
+      "turfStraightMeters": {
+        "内": 328.4,
+        "外": 403.7
+      },
+      "dirtStraightMeters": 329.1,
+      "turfElevationMeters": {
+        "内": 3.1,
+        "外": 4.3
+      },
+      "dirtElevationMeters": 3.0,
+      "officialFacts": [
+        "芝Aコース直線：内回り328.4m、外回り403.7m（B～Dではそれぞれ323.4m、398.7m）",
+        "芝は1400m・1600m・2000mに内回り／外回り両方の設定がある",
+        "3コーナーで上り、4コーナーにかけて下る淀の坂。最後の直線はほぼ平坦",
+        "ダート直線329.1m。ダート1400mは芝スタート。"
+      ],
+      "analysisNotes": [
+        "内回りは小回り・短い直線に対応できる先行力や器用さに注目",
+        "外回りは下り坂からの持続力と直線の伸びに注目",
+        "枠順・脚質・血統・騎手の優位性は集計条件と開催時期を確認"
+      ],
+      "officialSource": "https://www.jra.go.jp/facilities/race/kyoto/course/"
+    }
+  }
 }
